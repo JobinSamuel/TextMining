@@ -5,7 +5,9 @@ import matplotlib.pyplot as plt #Used for plotting
 from wordcloud import WordCloud #Used to form wordcloud
 import nltk         #Python library for Natural Language Processing
 
-#Question -1
+##Extracting reviews of any product from e-commerce website Amazon.
+#Performing sentiment analysis on this extracted data and build a unigram and bigram word cloud.
+
 # creating empty reviews list 
 amzn = []
 
@@ -159,7 +161,8 @@ plt.imshow(wordCloud, interpolation='bilinear')
 plt.axis("off")
 plt.show()
 
-####Question -2
+#####Extracting reviews for any movie from IMDB and perform sentiment analysis.
+
 # creating empty reviews list 
 imdb = []
 
@@ -249,7 +252,8 @@ wordcloud_neg_i_n_neg = WordCloud(
 plt.figure(3)
 plt.imshow(wordcloud_neg_i_n_neg) #Forming a negative wordcloud
 
-##Question -3
+###Choosing any other website on the internet and do some research on how to extract text and perform sentiment analysis
+
 #Forming an empty variable
 flpkt=[]
 
