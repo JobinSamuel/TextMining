@@ -6,7 +6,10 @@ library(wordcloud) #Used to form word cloud
 library(wordcloud2) #Also used to form word cloud
 library(RWeka) #RWeka is a collection of machine learning algorithms for data mining tasks 
 library(syuzhet) #Used to extracts sentiments
-#Question -1
+
+
+#Extracting reviews of any product from e-commerce website Amazon.
+#Performing sentiment analysis on this extracted data and build a unigram and bigram word cloud. 
 #Read data
 amzn <- "https://www.amazon.in/New-Apple-iPhone-Pro-128GB/dp/B08L5H1B5P/ref=sr_1_1_sspa?crid=IBFXY67TWAHK&dchild=1&keywords=iphone+13+%2B+pro+max&qid=1634806878&sprefix=iphone+13%2Caps%2C293&sr=8-1-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUExWVEyMUlORDNaSEFQJmVuY3J5cHRlZElkPUEwNDMxNjcxVUxNUzNIQzJaNVZMJmVuY3J5cHRlZEFkSWQ9QTAwNjA5ODhaSDBDODU0MEZISUkmd2lkZ2V0TmFtZT1zcF9hdGYmYWN0aW9uPWNsaWNrUmVkaXJlY3QmZG9Ob3RMb2dDbGljaz10cnVl#customerReviews"
 
@@ -114,7 +117,7 @@ sort_two <- two_word[order(two_word$Freq, decreasing = TRUE), ]
 
 wordcloud(sort_two$big, sort_two$Freq, random.order = F, scale = c(2, 0.35), min.freq = minfreq_bigram, colors = brewer.pal(8, "Dark2"), max.words = 150)
 
-#Question -2
+#Extracting reviews for any movie from IMDB and perform sentiment analysis.
 imdb <- "https://www.imdb.com/title/tt1477834/reviews?ref_=tt_ov_rt" #Read data
 
 IMDB_reviews <- NULL #Creating a null variable
@@ -210,7 +213,7 @@ s
 barplot(colSums(s), las = 2, col = rainbow(10),
         ylab = 'Count',main= 'Sentiment scores for IMDB Reviews')
 
-#Question -3
+#Choosing any other website on the internet and do some research on how to extract text and perform sentiment analysis
 #Read data
 flp <- "https://www.flipkart.com/apple-watch-series-3-gps-42-mm-space-grey-aluminium-case-black-sport-band/product-reviews/itm91c560e722cdd?pid=SMWF94AYMNYHTYDJ&lid=LSTSMWF94AYMNYHTYDJFOPINH&marketplace=FLIPKART&page"
 
